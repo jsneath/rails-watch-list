@@ -6,4 +6,7 @@ class List < ApplicationRecord
   validates :name, uniqueness: true
   
   has_many :movies, through: :bookmarks, dependent: :destroy
+
+  has_one_attached :photo
+  
 end
